@@ -21,6 +21,9 @@ android {
     }
 
     buildTypes {
+        debug {
+            resValue("string", "movie_key", localProperties['apiKey'])
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -32,6 +35,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    buildFeatures {
+        buildConfig = true
     }
 }
 
@@ -56,22 +62,21 @@ dependencies {
     def retrofit_version = "2.9.0"
     def logging_version = "4.3.1"
     def rxKotlin_version = "2.4.0"
-    def rxAndroid_version = "3.0.0"
-    def rxJava_version = "3.0.0"
+    def rxAndroid_version = "2.1.0"
+    def rxJava_version = "2.2.10"
 
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation "com.squareup.okhttp3:okhttp:$logging_version"
     implementation "com.squareup.okhttp3:logging-interceptor:$logging_version"
 
-    // - - WP7 Progress Bar
-    implementation 'com.github.shadowalker77:wp7progressbar:1.0.5'
-
     //Rx Libraries
     implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlin_version"
-    implementation "io.reactivex.rxjava3:rxandroid:$rxAndroid_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroid_version"
     // Because RxAndroid releases are few and far between, it is recommended you also
     // explicitly depend on RxJava's latest version for bug fixes and new features.
     // (see https://github.com/ReactiveX/RxJava/releases for latest 3.x.x version)
-    implementation "io.reactivex.rxjava3:rxjava:$rxJava_version"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJava_version"
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+
 }
