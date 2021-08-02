@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">movies-search</string>
+    <string name="search_movie">Search for your movie...</string>
+    <string name="empty_search">Empty search!</string>
 </resources>
