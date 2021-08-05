@@ -1,7 +1,8 @@
 package com.example.movies_search.model.retrofit
 
+import com.example.movies_search.model.Base
 import com.example.movies_search.model.Search
-import io.reactivex.Observable
+import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -9,10 +10,11 @@ import retrofit2.http.Query
 
 
 interface ApiInterface {
+
     @GET("?")
     fun getSearch(
-        @Query("api_key") apiKey: String?,
-        @Query("query") movieName: String?
-    ): Observable<Search?>?
+        @Query("rapidapi-key") apiKey: String?,
+        @Query("s") movieName: String
+    ): Call<Base>?
 
 }

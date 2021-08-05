@@ -18,11 +18,14 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
     }
 
     buildTypes {
         debug {
-            resValue("string", "movie_key", localProperties['apiKey'])
+            buildConfigField("String", "API_KEY", "\"" + localProperties['apiKey'] + "\"")
         }
         release {
             minifyEnabled false
