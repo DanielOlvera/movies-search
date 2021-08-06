@@ -7,4 +7,5 @@
     <string name="movie_not_found">Movie not found... :(</string>
     <string name="completed">Completed</string>
     <string name="searching_movies">Searching movies</string>
+    <string name="tap_to_see_the_full_poster">Tap to see the full poster</string>
 </resources>

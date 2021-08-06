@@ -10,8 +10,9 @@
         android:id="@+id/dMoviePoster"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@id/dTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/dTitle"
@@ -19,40 +20,51 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:textAlignment="center"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/dImdbID"
         tools:text="Title" />
 
     <TextView
         android:id="@+id/dYear"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="25dp"
         android:gravity="center_horizontal"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/dTitle"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
         tools:text="Year" />
 
     <TextView
         android:id="@+id/dImdbID"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="25dp"
         android:gravity="center_horizontal"
         android:textAlignment="center"
-        android:textSize="15dp"
-        app:layout_constraintTop_toBottomOf="@+id/dYear"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toRightOf="@id/dYear"
+        app:layout_constraintRight_toLeftOf="@id/dType"
         tools:text="imdbID" />
 
     <TextView
         android:id="@+id/dType"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
         android:layout_marginBottom="25dp"
         android:gravity="center_horizontal"
-        android:textSize="12dp"
-        app:layout_constraintTop_toBottomOf="@+id/dImdbID"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintRight_toRightOf="parent"
         tools:text="Type" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
