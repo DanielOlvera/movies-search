@@ -3,4 +3,8 @@
     <string name="search_movie">Search for your movie…</string>
     <string name="empty_search">Empty search!</string>
     <string name="search">Search</string>
+    <string name="err_key_missing">Missing key</string>
+    <string name="movie_not_found">Movie not found... :(</string>
+    <string name="completed">Completed</string>
+    <string name="searching_movies">Searching movies</string>
 </resources>

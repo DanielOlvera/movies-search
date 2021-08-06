@@ -11,27 +11,15 @@ import com.bumptech.glide.load.resource.drawable.GlideDrawable
 import com.bumptech.glide.request.RequestListener
 import com.example.movies_search.R
 import com.example.movies_search.model.Search
+import kotlinx.android.synthetic.main.activity_details.*
 
 
 class DetailsActivity : AppCompatActivity() {
-    private var moviePosther: ImageView? = null
-    private var titleText: TextView? = null
-    private var yearText: TextView? = null
-    private var detailTxt: TextView? = null
-    private var rankTxt: TextView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
-        initViews()
         loadDetails(intent)
-    }
-
-    private fun initViews() {
-        moviePosther = findViewById<View>(R.id.dMoviePosther) as ImageView
-        titleText = findViewById<View>(R.id.dTitle) as TextView
-        yearText = findViewById<View>(R.id.dYear) as TextView
-        detailTxt = findViewById<View>(R.id.dDetails) as TextView
-        rankTxt = findViewById<View>(R.id.dRanking) as TextView
     }
 
     private fun loadDetails(intent: Intent) {
