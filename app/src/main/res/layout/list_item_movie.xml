@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/movies_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -20,7 +21,8 @@
                 android:id="@+id/movieCDPosther"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:visibility="visible"/>
+                android:visibility="visible"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/title"
@@ -30,9 +32,10 @@
                 android:paddingRight="16dp"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:layout_below="@+id/movieCDPosther"/>
+                android:layout_below="@+id/movieCDPosther"
+                android:paddingEnd="16dp" />
 
-            <ImageView
+            <TextView
                 android:id="@+id/type"
                 android:layout_width="15dp"
                 android:layout_height="15dp"
@@ -40,16 +43,21 @@
                 android:scaleType="centerCrop"
                 android:layout_marginLeft="30dp"
                 android:layout_toRightOf="@+id/title"
-                android:layout_below="@+id/movieCDPosther"/>
+                android:layout_below="@+id/movieCDPosther"
+                android:layout_toEndOf="@+id/title"
+                android:layout_marginStart="30dp"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/imdbID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:text="5.0"
+                tools:text="5.0"
                 android:layout_below="@+id/movieCDPosther"
-                android:layout_toRightOf="@+id/type"/>
+                android:layout_toRightOf="@+id/type"
+                android:layout_toEndOf="@+id/type"
+                android:layout_marginStart="8dp" />
 
             <TextView
                 android:id="@+id/year"
@@ -57,7 +65,8 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="16dp"
                 android:layout_below="@+id/title"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:paddingEnd="16dp" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
